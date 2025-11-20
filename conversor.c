@@ -56,7 +56,7 @@ int verificar_overflow(const char *numero_str, int base) {
 int octal_para_binario(const char *numero_octal, char *resultado) {
 
     if (!validar_octal(numero_octal)) {
-        printf("[ERRO] Numero octal invalido! Use apenas digitos de 0 a 7.\n");
+        printf("[ERRO] Numero octal invalido. Use apenas digitos de 0 a 7.\n");
         return 0;
     }
     
@@ -111,7 +111,7 @@ int octal_para_binario(const char *numero_octal, char *resultado) {
 int binario_para_octal(const char *numero_binario, char *resultado) {
 
     if (!validar_binario(numero_binario)) {
-        printf("[ERRO] Numero binario invalido! Use apenas digitos 0 e 1.\n");
+        printf("[ERRO] Numero binario invalido. Use apenas digitos 0 e 1.\n");
         return 0;
     }
     
@@ -228,7 +228,7 @@ int main() {
         printf("\nDigite sua opcao (0, 1 ou 2): ");
         
         if (scanf("%d", &opcao) != 1) {
-            printf("\n[ERRO] Entrada invalida! Digite apenas numeros.\n");
+            printf("\n[ERRO] Entrada invalida. Digite apenas numeros.\n");
             limpar_buffer();
             printf("\nPressione ENTER para continuar...");
             getchar();
@@ -285,4 +285,5 @@ int main() {
     }
     
     return 0;
+
 }
